@@ -1,0 +1,49 @@
+@import './../../assets/colors';
+
+.item-container {
+  border: solid 1px $grey;
+  min-width: 125px;
+  height: auto;
+  padding: 10px;
+
+  .product-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .reduced-price {
+    font-size: 0.75rem;
+    min-height: 21px;
+    text-decoration: line-through;
+  }
+
+  .rating-star {
+    height: 8px;
+    width: auto;
+    margin: 1px;
+  }
+
+  .favorite {
+    height: 24px;
+    display: block;
+    width: auto;
+    margin: 5px 0;
+  }
+
+  img {
+    width: 75px;
+  }
+
+  .bestellen-button {
+    background-color: $black;
+    border: none;
+    color: $white;
+    padding: 6px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 16px 8px;
+  }
+}

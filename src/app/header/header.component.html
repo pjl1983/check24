@@ -1,0 +1,27 @@
+<div class="header-container">
+  <img class="logo" src="./../../assets/images/logo.png" alt="">
+  <div class="title">
+    <div class="header-title">Mobilo24</div>
+    <div class="header-subtitle">smartphone onlineshop</div>
+  </div>
+  <div class="navigation">
+    <ul>
+      <li>smartphones <img class="drop-down" src="./../../assets/images/back.svg" alt=""></li>
+      <li>topseller <img class="drop-down" src="./../../assets/images/back.svg" alt=""></li>
+      <li>angebote <img class="drop-down" src="./../../assets/images/back.svg" alt=""></li>
+      <li>suche <img src="./../../assets/images/search.svg" alt=""></li>
+    </ul>
+  </div>
+
+  <div class="merkzettel">Merkzettel ({{handyList.length}})
+    <div class="dropdown-content" *ngIf="handyList.length > 0">
+      <ul>
+        <ng-container *ngFor="let product of handyList">
+          <li>
+           <app-product [product]="product" [displayLikeButton]="false"></app-product>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>

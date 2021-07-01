@@ -1,0 +1,19 @@
+<div class="teaser-container">
+  <img class="background-teaser" src="./../../assets/images/slide-01-bg.jpg" alt="">
+  <div class="inner-teaser">
+    <div class="teaser-title">Finde dein perfektes Smartphone!</div>
+    <div class="teaser-sub-title">Die besten Smartphones für jedes Budget!</div>
+    <button class="shop-button">zum Shop</button>
+    <div class="teaser-phone-images">
+      <img class="teaser-image" src="./../../assets/images/main-teaser-left-side.png" alt="">
+      <img class="teaser-image" src="./../../assets/images/main-teaser-center.png" alt="">
+      <img class="teaser-image" src="./../../assets/images/main-teaser-side.png" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="brands">
+  <ng-container *ngFor="let brand of phoneBrands">
+    <img src="./../../assets/images/brands/{{brand}}.png">
+  </ng-container>
+</div>

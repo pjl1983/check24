@@ -1,0 +1,22 @@
+<div class="filter-buttons">
+  <ul>
+    <li [ngClass]="{'selected': filterType === vergleichFilterEnum.TOPSELLER}"
+        (click)="filterType = vergleichFilterEnum.TOPSELLER">Topseller
+    </li>
+    <li [ngClass]="{'selected': filterType === vergleichFilterEnum.NEUHEITEN}"
+        (click)="filterType = vergleichFilterEnum.NEUHEITEN">Neuheiten
+    </li>
+    <li [ngClass]="{'selected': filterType === vergleichFilterEnum.ANGEBOTE}"
+        (click)="filterType = vergleichFilterEnum.ANGEBOTE">Angebote
+    </li>
+    <li [ngClass]="{'selected': filterType === vergleichFilterEnum.BELIEBTHEIT}"
+        (click)="filterType = vergleichFilterEnum.BELIEBTHEIT">Beliebtheit
+    </li>
+  </ul>
+</div>
+
+<div class="vergleich-container">
+  <ng-container *ngFor="let product of products | productFilter:filterType">
+    <app-product [product]="product" [displayLikeButton]="true"></app-product>
+  </ng-container>
+</div>

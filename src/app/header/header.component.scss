@@ -1,0 +1,99 @@
+@import './../../assets/colors';
+
+.header-container {
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 50px;
+    align-self: flex-end;
+    margin: 8px;
+  }
+
+  .header-title {
+    font-size: 1.25rem;
+    font-weight: bolder;
+  }
+
+  .header-subtitle {
+    color: $grey;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .navigation {
+    margin: auto;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      img {
+        height: 1.5rem;
+        width: auto;
+        margin: 2px;
+      }
+
+      .drop-down {
+        transform: rotate(-90deg);
+      }
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 16px;
+    background-color: $white;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .merkzettel:hover {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+
+    ul {
+      padding: 8px 16px;
+    }
+
+    img {
+      width: auto;
+      height: 100px;
+    }
+
+    .dropdown-content {
+      display: block;
+      max-height: 400px;
+      overflow-y: scroll;
+    }
+  }
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+

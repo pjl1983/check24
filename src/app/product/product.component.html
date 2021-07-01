@@ -1,0 +1,31 @@
+<div class="item-container" *ngIf="product">
+  <div class="product-image-container">
+    <img src="./../../assets/images/phones/{{product.image}}" alt="">
+  </div>
+  <div class="flex">
+    <img class="rating-star" src="./../../assets/images/rating.svg" alt="">
+    <img class="rating-star" src="./../../assets/images/rating.svg" alt="">
+    <img class="rating-star" src="./../../assets/images/rating.svg" alt="">
+    <img class="rating-star" src="./../../assets/images/rating.svg" alt="">
+    <img class="rating-star" src="./../../assets/images/rating.svg" alt="">
+  </div>
+  <p>{{product.name}}</p>
+  <div class="reduced-price"
+       *ngIf="product.price_reduced else empty">{{product.price_reduced  | currency:'EUR':'symbol'}}</div>
+  <ng-template #empty>
+    <div>&nbsp;</div>
+  </ng-template>
+  <div>{{product.price | currency:'EUR':'symbol'}}</div>
+  <button class="bestellen-button">Bestellen</button>
+
+  <ng-container *ngIf="displayLikeButton">
+    <ng-container *ngIf="productHasBeenAdded else add">
+      <img (click)="addProduct(product)" class="favorite"
+           src="./../../assets/images/favorite_filled.svg">
+    </ng-container>
+    <ng-template #add>
+      <img (click)="addProduct(product)" class="favorite"
+           src="./../../assets/images/favorite.svg">
+    </ng-template>
+  </ng-container>
+</div>

@@ -1,0 +1,10 @@
+body {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
